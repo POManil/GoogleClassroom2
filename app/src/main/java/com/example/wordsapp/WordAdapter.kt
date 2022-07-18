@@ -28,7 +28,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * Adapter for the [RecyclerView] in [DetailActivity].
+ * Adapter for the [RecyclerView] in [WordListFragment].
  */
 class WordAdapter(private val letterId: String, context: Context) :
     RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
@@ -85,7 +85,7 @@ class WordAdapter(private val letterId: String, context: Context) :
         holder.button.text = item
 
         holder.button.setOnClickListener{
-            val queryURL: Uri = Uri.parse("${DetailActivity.SEARCH_PREFIX}${item}")
+            val queryURL: Uri = Uri.parse("${WordListFragment.SEARCH_PREFIX}${item}")
 
             val intent = Intent(Intent.ACTION_VIEW, queryURL)
 
